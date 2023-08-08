@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+  <title>Library of Giorgi</title>
+{% endblock %}
+
+{% block main %}
+
+  <div class="container">
+    <h1>Books of {{user[0]['username']}}</h1>
+    <div class="table-responsive-lg">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Shelves</th>
+            <th scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in book_shelf %}
+          <tr>
+            <td>{{ row["title"]}}</td>
+            <td>{{ row["author"]}}</td>
+            <td>{{ row["genre"]}}</td>
+            <td>{{ row["rating"]}}</td>
+            <td>{{ row["shelves"]}}</td>
+            <td>{{ row["curr_date"]}}</td>
+            <td>
+              <div class="buttons-container">
+                <a class="update-btn" href="/update/{{row['book_id']}}">Update</a>
+                <a class="delete-btn" href="/delete/{{row['book_id']}}">Delete</a>
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}
