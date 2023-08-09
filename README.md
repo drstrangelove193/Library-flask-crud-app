@@ -1,32 +1,51 @@
-# Library of Giorgi
+# Library Management Mini-Project
 
-#### Description:
-This is a mini-project, a library in which user can store his/hers favorite books. Basically, a new user who enters the Library
-at first must register and sign in then he/she can add his/hers favorite books intro the database. I used Python/Flask, HTML, CSS
-SQLite3.
+![Library](./static/images/screenshot.jpg)
 
-I designed 2 tables in the database.First named users to store unique user_id-s and keep track of users using sessions.
-Second table is called books, in books table there are following columns: 
-book_id - to keep track of books,
-user_id - to connect to users table,
-title - for book title,
-author - book author,
-genre - book genre,
-rating - float point number from 0 including 5
-shelves - with 2 options "To-read" and "read"
-curr_date - to keep track of date when the book is added and when the book is updated
+## Description
 
-After user logs in, then user can Add a book. then user can update it or delete it from the database.
-I re-used some of the code from a Pset9 - Finance for login/logout register and helper functions
-In Helpers.py There are 2 functions , first:warning - that displays the warning message to user, when something is not working out
-another: decorated function to request user to login
+Welcome to the Library Management Mini-Project! This application allows users to create a personal library by storing their favorite books. Users can register, sign in, and manage their book collection in the database. The project is built using Python/Flask, HTML, CSS, and SQLite3.
 
-There I use custom books icon to return to index page every time user clicks it.
-I created couple of html files to match with routes, all of them extends layout.html
-in Layout.html I use navbar in the header and ul - for add book, login/ log out and register, in the end of layout.html 
-there is "main" tag and all the other pages content goes in there.
+### Features
 
-To Display data from database I use Bootstrap Table, using bootstrap for styling and also using main.css file where I have plain CSS.
-for update and delete buttons, for background of body , logo etc...
+- User registration and login functionality
+- Add, update, and delete favorite books
+- Organize books with title, author, genre, rating, shelves (To-read or read), and dates
+- Use of sessions to track and manage user data
 
-In the end I want to say that , as a begginer in Computer Science This project was really a challenge for me and I am glad I did it. I want to thank all the CS50 Staff and Harvard University for this amazing opportunity!
+## Database Structure
+
+The application is designed with two tables in the database:
+
+1. **users**: Stores unique user IDs and manages user sessions.
+2. **books**: Contains book details such as book ID, user ID, title, author, genre, rating, shelves, and dates.
+
+## Getting Started
+
+Follow these steps to set up and run the Library Management Mini-Project on your local machine:
+
+1. Clone this repository: `git clone https://github.com/drstrangelove193/Library-flask-crud-app.git`
+2. Navigate to the project directory: `cd LIBRARY`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Run the Flask app: `flask run`
+
+## Usage
+
+- Register or log in to access your library
+- Add your favorite books with details
+- Update or delete books as needed
+
+## Layout and Styling
+
+The project utilizes Bootstrap and custom CSS for styling. The main layout includes a navbar with options for adding books, logging in, and registering. The `main` tag is used to contain the content of various pages.
+
+## Acknowledgments
+
+This mini-project was both challenging and rewarding, providing valuable experience as a beginner in the field of Computer Science. Special thanks to the CS50 Staff and Harvard University for the guidance and support.
+
+For inquiries or feedback, please contact me at giorgioragvelidze1@gmail.com
+
+
+
+
+
